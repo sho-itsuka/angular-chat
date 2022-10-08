@@ -22,4 +22,5 @@ export class AppComponent {
 
   comments    = COMMENTS
   currentUser = CURRENT_USER
+  comment = ''
 }
