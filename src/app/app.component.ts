@@ -22,4 +22,12 @@ export class AppComponent {
 
   comments    = COMMENTS
   currentUser = CURRENT_USER
+  comment = ''
+  commentDateFormat = 'yyyy年MM月dd日 HH:mm'
+
+  addComment(comment: string): void {
+    if (comment) {
+      this.comments.push(new Comment(this.currentUser, comment))
+    }
+  }
 }
