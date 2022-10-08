@@ -20,5 +20,6 @@ const COMMENTS: Comment[] = [
 })
 export class AppComponent {
 
-  comments = COMMENTS
+  comments    = COMMENTS
+  currentUser = CURRENT_USER
 }
