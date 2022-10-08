@@ -1,4 +1,4 @@
 export class Comment {
-  name!: string
+  name!:    string
   message!: string
 }
