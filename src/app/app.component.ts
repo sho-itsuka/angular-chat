@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
 import { Comment } from './class/comment';
+import { User }    from './class/user';
+
+const CURRENT_USER: User = new User(1, '五十川　洋平')
+const ANOTHER_USER: User = new User(2, '竹井　賢治')
 
 const COMMENTS: Comment[] = [
-  { name: '武井　賢治', message: 'お疲れ様です' },
-  { name: '木村　次郎', message: 'ありがとうございます。' },
-  { name: '工藤　三郎', message: '宜しくお願いします' }
+  new Comment(ANOTHER_USER, 'お疲れ様です。' ),
+  new Comment(ANOTHER_USER, 'この間の件ですが、どうなりましたか？'),
+  new Comment(CURRENT_USER, 'お疲れ様です。'),
+  new Comment(CURRENT_USER, 'クライアントからOKが出ました！')
 ]
 
 @Component({
@@ -14,9 +19,6 @@ const COMMENTS: Comment[] = [
   styleUrls:  ['./app.component.css']
 })
 export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
 
   comments = COMMENTS
 }
