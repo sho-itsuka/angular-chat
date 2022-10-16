@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-chat-e4b5f": {
+      "hosting": {
+        "angular-chat": [
+          "angular-chat-e4b5f"
+        ]
+      }
+    }
+  }
+}
